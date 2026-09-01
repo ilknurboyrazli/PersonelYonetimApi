@@ -1,0 +1,44 @@
+@PersonelYonetimApi_HostAddress = https://localhost:7092
+
+### PERSONEL EKLE
+POST {{PersonelYonetimApi_HostAddress}}/api/Personel
+Content-Type: application/json
+
+{
+  "ad": "Mehmet",
+  "soyad": "Kaya",
+  "departman": "Bilgi Islem",
+  "maas": 50000
+}
+
+###
+
+### TÜM PERSONELLERİ GETİR
+GET {{PersonelYonetimApi_HostAddress}}/api/Personel
+Accept: application/json
+
+###
+
+### ID'YE GÖRE PERSONEL GETİR
+GET {{PersonelYonetimApi_HostAddress}}/api/Personel/1
+Accept: application/json
+
+###
+
+### PERSONEL GÜNCELLE
+PUT https://localhost:7092/api/Personel/4
+Content-Type: application/json
+
+{
+  "id": 4,
+  "ad": "Mehmet",
+  "soyad": "Kaya",
+  "departman": "Yazilim",
+  "maas": 65000
+}
+
+###
+
+### PERSONEL SİL
+DELETE {{PersonelYonetimApi_HostAddress}}/api/Personel/1
+Accept: application/json
